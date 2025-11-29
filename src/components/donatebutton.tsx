@@ -110,7 +110,7 @@ const DonateButton = () => {
             </h2>
 
             {/* FORM */}
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 text-black">
               <input
                 type="text"
                 placeholder="Full Name"
