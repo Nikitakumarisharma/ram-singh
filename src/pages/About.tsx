@@ -51,62 +51,48 @@ const About = () => {
       </section>
 
       {/* Introduction */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <Card className="border-none shadow-lg">
-            <CardContent className="pt-8">
-              <p className="text-lg leading-relaxed mb-6">
-                M/S CHOUDHARY RAM SINGH JAN UTTHAN TRUST is a non-profit
-                organization registered as a Trust, headquartered at H-61, Third
-                Floor, Subhash Market, Kotla Mubarakpur, South East Delhi, Delhi
-                110003. Established on 21st November 2024, the Trust is driven
-                by a vision to bring sustainable upliftment to underprivileged
-                and marginalized sections of society through various
-                developmental initiatives.
-              </p>
-              <p className="text-lg leading-relaxed mb-8">
-                We work across Education, Healthcare, Sports Development, and
-                Social Welfare. We believe holistic support across these sectors
-                enables true empowerment for poor and marginalized communities.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* Vision & Mission */}
-      <section className="py-16 bg-accent">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <Card className="border-none shadow-lg">
-              <CardContent className="pt-8">
-                <h3 className="text-primary mb-6">Our Vision</h3>
-                <p className="text-lg leading-relaxed mb-6">
-                  To create a society where every individual, regardless of
-                  their socio-economic background, has access to quality
-                  education, healthcare, sports opportunities, and comprehensive
-                  social support systems that enable them to achieve their full
-                  potential and contribute meaningfully to nation-building.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-none shadow-lg">
-              <CardContent className="pt-8">
-                <h3 className="text-primary mb-6">Our Mission</h3>
-                <p className="text-lg leading-relaxed mb-6">
-                  To implement integrated development programs that address the
-                  multifaceted needs of underprivileged communities through
-                  sustainable, scalable, and impact-driven initiatives in
-                  education, healthcare, sports, and social welfare, thereby
-                  creating lasting positive change in the lives of millions
-                  across India.
-                </p>
-              </CardContent>
-            </Card>
+<section className="py-16">
+  <div className="container mx-auto px-4 max-w-6xl">
+    <Card className="border-none shadow-lg">
+      <CardContent className="pt-8">
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          
+          {/* Image Side */}
+          <div className="w-full">
+            <img
+              src="/overview.png"   // change to your image path
+              alt="Trust"
+              className="w-full h-auto rounded-xl object-cover"
+            />
           </div>
+
+          {/* Content Side */}
+          <div>
+            <p className="text-lg leading-relaxed mb-6">
+              M/S CHOUDHARY RAM SINGH JAN UTTHAN TRUST is a non-profit
+              organization registered as a Trust, headquartered at H-61, Third
+              Floor, Subhash Market, Kotla Mubarakpur, South East Delhi, Delhi
+              110003. Established on 21st November 2024, the Trust is driven
+              by a vision to bring sustainable upliftment to underprivileged
+              and marginalized sections of society through various
+              developmental initiatives.
+            </p>
+
+            <p className="text-lg leading-relaxed">
+              We work across Education, Healthcare, Sports Development, and
+              Social Welfare. We believe holistic support across these sectors
+              enables true empowerment for poor and marginalized communities.
+            </p>
+          </div>
+
         </div>
-      </section>
+
+      </CardContent>
+    </Card>
+  </div>
+</section>
+
 
       {/* Detailed Objectives */}
       <section className="py-16">
@@ -134,241 +120,156 @@ const About = () => {
       </section>
 
       {/* Education Initiatives */}
-      <section className="py-16 bg-accent">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-primary text-center mb-12">
-            Education Sector Initiatives
-          </h2>
+<section className="py-16 bg-accent">
+  <div className="container mx-auto px-4 max-w-6xl">
+    <h2 className="text-primary text-center mb-12">
+      Education Sector Initiatives
+    </h2>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <Card className="border-none shadow-md">
-              <CardContent className="pt-6">
-                <h4 className="font-bold text-lg mb-3 text-primary">
-                  School Infrastructure
-                </h4>
-                <p>
-                  Building and renovating schools in underserved areas with
-                  modern facilities, smart classrooms, libraries, and computer
-                  labs
-                </p>
-              </CardContent>
-            </Card>
+    <div className="grid md:grid-cols-2 gap-10 items-center">
+      
+      {/* Image */}
+      <img
+        src="/education.png"
+        className="w-full rounded-xl shadow-lg"
+        alt="Education"
+      />
 
-            <Card className="border-none shadow-md">
-              <CardContent className="pt-6">
-                <h4 className="font-bold text-lg mb-3 text-primary">
-                  Scholarship Programs
-                </h4>
-                <p>
-                  Merit and need-based scholarships covering tuition, books,
-                  uniforms, and educational materials for deserving students
-                </p>
-              </CardContent>
-            </Card>
+      {/* Content */}
+      <div className="grid md:grid-cols-2 gap-6">
+        {[
+          ["School Infrastructure", "Building and renovating schools with smart classrooms, libraries, and labs"],
+          ["Scholarship Programs", "Merit and need-based scholarships for deserving students"],
+          ["Vocational Training", "Skill programs aligned with industry demands"],
+          ["Digital Literacy", "Computer education in rural communities"],
+        ].map(([title, text], i) => (
+          <Card key={i} className="border-none shadow-md">
+            <CardContent className="pt-6">
+              <h4 className="font-bold text-lg mb-2 text-primary">{title}</h4>
+              <p>{text}</p>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
 
-            <Card className="border-none shadow-md">
-              <CardContent className="pt-6">
-                <h4 className="font-bold text-lg mb-3 text-primary">
-                  Vocational Training
-                </h4>
-                <p>
-                  Skill development programs in IT, healthcare, hospitality, and
-                  trades aligned with market demands
-                </p>
-              </CardContent>
-            </Card>
+    </div>
+  </div>
+</section>
 
-            <Card className="border-none shadow-md">
-              <CardContent className="pt-6">
-                <h4 className="font-bold text-lg mb-3 text-primary">
-                  Digital Literacy
-                </h4>
-                <p>
-                  Computer education and digital skills training to bridge the
-                  technology gap in rural communities
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* Healthcare Programs */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-primary text-center mb-12">
-            Healthcare Programs
-          </h2>
+<section className="py-16">
+  <div className="container mx-auto px-4 max-w-6xl">
+    <h2 className="text-primary text-center mb-12">
+      Healthcare Programs
+    </h2>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <Card className="border-none shadow-md">
-              <CardContent className="pt-6">
-                <h4 className="font-bold text-lg mb-3 text-primary">
-                  Mobile Medical Units
-                </h4>
-                <p>
-                  Equipped mobile clinics providing primary healthcare,
-                  diagnostics, and medicines in remote areas
-                </p>
-              </CardContent>
-            </Card>
+    <div className="grid md:grid-cols-2 gap-10 items-center">
 
-            <Card className="border-none shadow-md">
-              <CardContent className="pt-6">
-                <h4 className="font-bold text-lg mb-3 text-primary">
-                  Health Camps
-                </h4>
-                <p>
-                  Regular medical camps offering free consultations,
-                  diagnostics, surgeries, and treatment
-                </p>
-              </CardContent>
-            </Card>
+      {/* Content */}
+      <div className="grid md:grid-cols-2 gap-6">
+        {[
+          ["Mobile Medical Units", "Primary healthcare in remote areas"],
+          ["Health Camps", "Free consultations and treatments"],
+          ["Maternal & Child Health", "Nutrition and wellness care"],
+          ["Health Awareness", "Hygiene and disease prevention"],
+        ].map(([title, text], i) => (
+          <Card key={i} className="border-none shadow-md">
+            <CardContent className="pt-6">
+              <h4 className="font-bold text-lg mb-2 text-primary">{title}</h4>
+              <p>{text}</p>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
 
-            <Card className="border-none shadow-md">
-              <CardContent className="pt-6">
-                <h4 className="font-bold text-lg mb-3 text-primary">
-                  Maternal & Child Health
-                </h4>
-                <p>
-                  Specialized programs for pregnant women, new mothers, and
-                  children focusing on nutrition and wellness
-                </p>
-              </CardContent>
-            </Card>
+      {/* Image */}
+      <img
+        src="/healthcare.png"
+        className="w-full rounded-xl shadow-lg"
+        alt="Healthcare"
+      />
 
-            <Card className="border-none shadow-md">
-              <CardContent className="pt-6">
-                <h4 className="font-bold text-lg mb-3 text-primary">
-                  Health Awareness
-                </h4>
-                <p>
-                  Community education programs on hygiene, disease prevention,
-                  nutrition, and healthy lifestyles
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+    </div>
+  </div>
+</section>
+
 
       {/* Sports Development */}
-      <section className="py-16 bg-accent">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-primary text-center mb-12">
-            Sports Development Programs
-          </h2>
+<section className="py-16 bg-accent">
+  <div className="container mx-auto px-4 max-w-6xl">
+    <h2 className="text-primary text-center mb-12">
+      Sports Development Programs
+    </h2>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <Card className="border-none shadow-md">
-              <CardContent className="pt-6">
-                <h4 className="font-bold text-lg mb-3 text-primary">
-                  Sports Infrastructure
-                </h4>
-                <p>
-                  Building playgrounds, stadiums, indoor facilities for various
-                  sports including cricket, football, athletics
-                </p>
-              </CardContent>
-            </Card>
+    <div className="grid md:grid-cols-2 gap-10 items-center">
 
-            <Card className="border-none shadow-md">
-              <CardContent className="pt-6">
-                <h4 className="font-bold text-lg mb-3 text-primary">
-                  Coaching & Training
-                </h4>
-                <p>
-                  Professional coaching programs with certified trainers for
-                  talent identification and development
-                </p>
-              </CardContent>
-            </Card>
+      {/* Image */}
+      <img
+        src="/coach.png"
+        className="w-full rounded-xl shadow-lg"
+        alt="Sports"
+      />
 
-            <Card className="border-none shadow-md">
-              <CardContent className="pt-6">
-                <h4 className="font-bold text-lg mb-3 text-primary">
-                  Equipment Support
-                </h4>
-                <p>
-                  Providing quality sports equipment, gear, and nutritional
-                  support to promising athletes
-                </p>
-              </CardContent>
-            </Card>
+      {/* Content */}
+      <div className="grid md:grid-cols-2 gap-6">
+        {[
+          ["Sports Infrastructure", "Playgrounds, stadiums & facilities"],
+          ["Coaching & Training", "Certified professional coaching"],
+          ["Equipment Support", "Gear & nutrition support"],
+          ["Sports Scholarships", "Financial support to athletes"],
+        ].map(([title, text], i) => (
+          <Card key={i} className="border-none shadow-md">
+            <CardContent className="pt-6">
+              <h4 className="font-bold text-lg mb-2 text-primary">{title}</h4>
+              <p>{text}</p>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
 
-            <Card className="border-none shadow-md">
-              <CardContent className="pt-6">
-                <h4 className="font-bold text-lg mb-3 text-primary">
-                  Sports Scholarships
-                </h4>
-                <p>
-                  Financial support for talented athletes to pursue sports
-                  careers while continuing education
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+    </div>
+  </div>
+</section>
+
 
       {/* Social Welfare */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-primary text-center mb-12">
-            Social Welfare Activities
-          </h2>
+<section className="py-16">
+  <div className="container mx-auto px-4 max-w-6xl">
+    <h2 className="text-primary text-center mb-12">
+      Social Welfare Activities
+    </h2>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <Card className="border-none shadow-md">
-              <CardContent className="pt-6">
-                <h4 className="font-bold text-lg mb-3 text-primary">
-                  Women Empowerment
-                </h4>
-                <p>
-                  Self-help groups, vocational training, microfinance, and
-                  entrepreneurship programs for women
-                </p>
-              </CardContent>
-            </Card>
+    <div className="grid md:grid-cols-2 gap-10 items-center">
 
-            <Card className="border-none shadow-md">
-              <CardContent className="pt-6">
-                <h4 className="font-bold text-lg mb-3 text-primary">
-                  Elderly Care
-                </h4>
-                <p>
-                  Support services, healthcare, recreational activities, and
-                  social engagement for senior citizens
-                </p>
-              </CardContent>
-            </Card>
+      {/* Content */}
+      <div className="grid md:grid-cols-2 gap-6">
+        {[
+          ["Women Empowerment", "Self-help & entrepreneurship programs"],
+          ["Elderly Care", "Healthcare & engagement for seniors"],
+          ["Livelihood Programs", "Sustainable income initiatives"],
+          ["Emergency Relief", "Disaster response & food support"],
+        ].map(([title, text], i) => (
+          <Card key={i} className="border-none shadow-md">
+            <CardContent className="pt-6">
+              <h4 className="font-bold text-lg mb-2 text-primary">{title}</h4>
+              <p>{text}</p>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
 
-            <Card className="border-none shadow-md">
-              <CardContent className="pt-6">
-                <h4 className="font-bold text-lg mb-3 text-primary">
-                  Livelihood Programs
-                </h4>
-                <p>
-                  Skill-based employment generation, farming support, and
-                  sustainable income opportunities
-                </p>
-              </CardContent>
-            </Card>
+      {/* Image */}
+      <img
+        src="/social.png"
+        className="w-full rounded-xl shadow-lg"
+        alt="Social"
+      />
 
-            <Card className="border-none shadow-md">
-              <CardContent className="pt-6">
-                <h4 className="font-bold text-lg mb-3 text-primary">
-                  Emergency Relief
-                </h4>
-                <p>
-                  Disaster response, food distribution, shelter support during
-                  crises and natural calamities
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+    </div>
+  </div>
+</section>
+
 
       {/* Fund Utilization Table */}
       <section className="py-16 bg-accent">
