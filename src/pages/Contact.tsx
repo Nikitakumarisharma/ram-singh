@@ -42,7 +42,7 @@ const Contact = () => {
     const message = encodeURIComponent(
       "Hello, I'd like to know more about your NGO and how I can contribute."
     );
-    window.open(`https://wa.me/919999999999?text=${message}`, "_blank");
+    window.open(`https://wa.me/917291015735?text=${message}`, "_blank");
   };
 
   return (
@@ -103,7 +103,7 @@ const Contact = () => {
                       </label>
                       <Input
                         type="tel"
-                        placeholder="+91 99999 99999"
+                        placeholder="+917291015735"
                         value={formData.phone}
                         onChange={(e) =>
                           setFormData({ ...formData, phone: e.target.value })
@@ -197,16 +197,16 @@ const Contact = () => {
                       <div>
                         <h4 className="font-bold text-lg mb-2">Email Us</h4>
                         <a
-                          href="mailto:contact@crsjantrust.org"
+                          href="mailto:deepanshu.arya1995@gmail.com"
                           className="text-primary hover:underline block"
                         >
-                          contact@crsjantrust.org
+                          deepanshu.arya1995@gmail.com
                         </a>
                         <a
-                          href="mailto:info@crsjantrust.org"
+                          href="mailto:sb6254824@gmail.com"
                           className="text-primary hover:underline block"
                         >
-                          info@crsjantrust.org
+                          sb6254824@gmail.com
                         </a>
                       </div>
                     </div>
@@ -222,10 +222,10 @@ const Contact = () => {
                       <div>
                         <h4 className="font-bold text-lg mb-2">Call Us</h4>
                         <a
-                          href="tel:+919999999999"
+                          href="tel:+917291015735"
                           className="text-primary hover:underline block"
                         >
-                          +91 99999 99999
+                          +917291015735
                         </a>
                         <p className="text-sm text-muted-foreground mt-1">
                           Mon - Fri: 10:00 AM - 6:00 PM
