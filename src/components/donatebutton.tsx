@@ -45,33 +45,43 @@ const DonateButton = () => {
       return;
     }
 
-    const options = {
-       key: "rzp_live_Rm1asz5nETxQSI",
-      amount: Number(amount) * 100,
-      currency: "INR",
-      name: "Choudhary Ram Singh Jan Utthan Trust",
-      description: "Worldwide Donation",
-      image: "https://razorpay.com/favicon.png",
+const options = {
+  key: "rzp_live_Rm1asz5nETxQSI", 
+  amount: Number(amount) * 100,
+  currency: "INR",
+  name: "Choudhary Ram Singh Jan Utthan Trust",
+  description: "Worldwide Donation",
+  image: "https://razorpay.com/favicon.png",
 
-      notes: {
-        international: "enabled",
-      },
+  // ✅ IMPORTANT: Payment Methods (PayPal added)
+  method: {
+    upi: true,
+    card: true,
+    netbanking: true,
+    wallet: true,
+    paypal: true, // ✅ International users pay via PayPal
+  },
 
-      handler: function (response: any) {
-        alert(
-          "Donation Successful! Payment ID: " + response.razorpay_payment_id
-        );
-      },
+  notes: {
+    international: "enabled",
+  },
 
-      prefill: {
-        name,
-        email,
-      },
+  handler: function (response: any) {
+    alert(
+      "Donation Successful! Payment ID: " + response.razorpay_payment_id
+    );
+  },
 
-      theme: {
-        color: "#EC6B2A",
-      },
-    };
+  prefill: {
+    name,
+    email,
+  },
+
+  theme: {
+    color: "#EC6B2A",
+  },
+};
+
 
     try {
       const rzp = new window.Razorpay(options);
