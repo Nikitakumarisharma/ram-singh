@@ -46,7 +46,7 @@ const DonateButton = () => {
     }
 
     const options = {
-  key: process.env.NEXT_PUBLIC_RAZORPAY_KEY,
+       key: "rzp_live_Rm1asz5nETxQSI",
       amount: Number(amount) * 100,
       currency: "INR",
       name: "Choudhary Ram Singh Jan Utthan Trust",

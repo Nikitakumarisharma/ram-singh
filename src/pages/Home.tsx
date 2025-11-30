@@ -72,45 +72,139 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Mission, Vision, Objectives */}
-      <section className="py-20 bg-accent">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-none shadow-lg hover:shadow-primary transition-all duration-300">
-              <CardContent className="pt-6">
-                <h3 className="text-primary mb-4">Our Mission</h3>
-                <p className="text-muted-foreground">
+{/* Trust + Mission Section */}
+<section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+  <div className="container mx-auto px-4">
+    
+    {/* Main Heading with decorative elements */}
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent mb-4">
+        Trust & Our Purpose
+      </h2>
+      <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-700 mx-auto rounded-full"></div>
+      <p className="text-gray-600 mt-6 max-w-2xl mx-auto text-lg">
+        Committed to creating sustainable impact and empowering communities through holistic development
+      </p>
+    </div>
+
+    {/* Two Side Layout */}
+    <div className="grid lg:grid-cols-2 gap-12 items-start">
+      
+      {/* LEFT SIDE → TRUST GRID */}
+      <div className="space-y-6">
+        <div className="grid gap-6">
+
+          {/* Founder Card */}
+          <div className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100 hover:border-blue-200 transform hover:-translate-y-1">
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">Founder</h3>
+                <p className="text-gray-600">Mr Deepanshu Arya</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Trustee Card */}
+          <div className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100 hover:border-blue-200 transform hover:-translate-y-1">
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">Trustee</h3>
+                <p className="text-gray-600">Mrs. Shashi Bala</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Card */}
+          <div className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100 hover:border-blue-200 transform hover:-translate-y-1">
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Contact</h3>
+                <div className="space-y-2">
+                  <p className="text-gray-600 flex items-center">
+                    <svg className="w-4 h-4 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    Choudhary.ramsingh.trust10@gmail.com
+                  </p>
+                  <p className="text-gray-600 flex items-center">
+                    <svg className="w-4 h-4 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    +917291015735
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* RIGHT SIDE → MISSION / VISION / OBJECTIVES */}
+      <div className="space-y-6">
+        <div className="grid gap-6">
+          {/* Mission Card */}
+          <div className="group relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100 transform hover:-translate-y-1">
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0">
+                <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Our Mission</h3>
+                <p className="text-gray-700 leading-relaxed">
                   To create sustainable development and upliftment of
                   underprivileged communities through holistic support across
                   education, healthcare, sports, and social welfare sectors.
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
+          </div>
 
-            <Card className="border-none shadow-lg hover:shadow-primary transition-all duration-300">
-              <CardContent className="pt-6">
-                <h3 className="text-primary mb-4">Our Vision</h3>
-                <p className="text-muted-foreground">
+          {/* Vision Card */}
+          <div className="group relative bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100 transform hover:-translate-y-1">
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0">
+                <div className="w-14 h-14 bg-gradient-to-br from-green-600 to-green-800 rounded-xl flex items-center justify-center">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                </div>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Our Vision</h3>
+                <p className="text-gray-700 leading-relaxed">
                   A society where every individual has access to quality
                   education, healthcare, sports opportunities, and social
                   support for holistic development and prosperity.
                 </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-none shadow-lg hover:shadow-primary transition-all duration-300">
-              <CardContent className="pt-6">
-                <h3 className="text-primary mb-4">Our Objectives</h3>
-                <p className="text-muted-foreground">
-                  Implement large-scale impact projects across India, reaching
-                  millions of beneficiaries through integrated development
-                  programs and sustainable community initiatives.
-                </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Four Pillars */}
       <section className="py-20">

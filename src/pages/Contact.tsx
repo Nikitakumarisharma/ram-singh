@@ -197,10 +197,10 @@ const Contact = () => {
                       <div>
                         <h4 className="font-bold text-lg mb-2">Email Us</h4>
                         <a
-                          href="mailto:deepanshu.arya1995@gmail.com"
+                          href="mailto:Choudhary.ramsingh.trust10@gmail.com"
                           className="text-primary hover:underline block"
                         >
-                          deepanshu.arya1995@gmail.com
+                          Choudhary.ramsingh.trust10@gmail.com
                         </a>
                         <a
                           href="mailto:sb6254824@gmail.com"
