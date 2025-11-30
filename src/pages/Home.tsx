@@ -139,9 +139,6 @@ const Home = () => {
               <p className="text-gray-600 break-all">
                 Choudhary.ramsingh.trust10@gmail.com
               </p>
-              <p className="text-gray-600">
-                +91 72910 15735
-              </p>
             </div>
           </div>
         </div>
